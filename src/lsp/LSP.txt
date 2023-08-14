@@ -1,0 +1,7 @@
+The Liskov Substitution Principle is a concept in programming that states
+that objects of a derived class should be able to be used in place of objects
+of the base class without affecting the correctness of the program.
+In simpler terms, if you have a class and you create a new class that
+inherits from it, you should be able to replace objects of the new class
+wherever you were using objects of the old class, and everything should
+still work correctly.

@@ -1,4 +1,4 @@
-// evitando o DRY (don't repeat yourself), retiro os métodos que se repetiam das classes filhas
+// Aplico o DRY (don't repeat yourself), retiro os métodos que se repetiam das classes filhas
 // passo para a super classe e crio o atributo discount na mesma.
 // As classes filhas só precisam ter o valor diferente para o atributo.
 
