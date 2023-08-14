@@ -1,30 +1,21 @@
-// Poderia criar um módulo para cada classe, mas como são simples e são todas da mesma família,
-// deixo todas no mesmo módulo.
-
-// isto é uma família de algorítimos
+// evitando o DRY (don't repeat yourself), retiro os métodos que se repetiam das classes filhas
+// passo para a super classe e crio o atributo discount na mesma.
+// As classes filhas só precisam ter o valor diferente para o atributo.
 
 export abstract class Discount {
-  abstract calculate(price: number): number;
+  protected discount = 0;
+
+  calculate(price: number): number {
+    return price - price * this.discount;
+  }
 }
 
 export class FiftyPercentDiscount extends Discount {
-  private readonly discount = 0.5;
-
-  calculate(price: number): number {
-    return price - price * this.discount;
-  }
+  protected readonly discount = 0.5;
 }
 
 export class TenPercentDiscount extends Discount {
-  private readonly discount = 0.1;
-
-  calculate(price: number): number {
-    return price - price * this.discount;
-  }
+  protected readonly discount = 0.1;
 }
 
-export class NoDiscount extends Discount {
-  calculate(price: number): number {
-    return price;
-  }
-}
+export class NoDiscount extends Discount {}
