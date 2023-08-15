@@ -1,0 +1,7 @@
+Interface segregation principle:
+
+Os clientes não devem ser forçados a depender de types, interfaces ou membros
+abstratos que não utilizam.
+
+OBS: a client is any class or component that depends on or makes use of the
+methods and functionality provided by an interface.
